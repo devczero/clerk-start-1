@@ -1,0 +1,2 @@
+npm install @clerk/nextjs @supabase/ssr @supabase/supabase-js class-variance-authority 
+clsx framer-motion lucide-react tailwind-merge tailwindcss-animate zod
