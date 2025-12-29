@@ -4,11 +4,9 @@ import Link from "next/link"
 import { SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/nextjs"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
-import { usePathname } from "next/navigation"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
-    const pathname = usePathname()
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -16,11 +14,6 @@ export default function Navbar() {
 
     const closeMenu = () => {
         setIsOpen(false)
-    }
-
-    // Hide navbar on dashboard routes
-    if (pathname?.startsWith('/dashboard')) {
-        return null
     }
 
     return (
@@ -110,7 +103,7 @@ export default function Navbar() {
                                 </SignedIn>
                                 <SignedOut>
                                     <SignInButton>
-                                        <button
+                                        <button 
                                             className="px-4 py-2.5 hover:bg-white/30 bg-white/10 border border-white/20 rounded-xl">
                                             Sign In
                                         </button>
