@@ -1,0 +1,772 @@
+[
+  {
+    "id": 1,
+    "question": "How many invocable methods can a class have?",
+    "options": {
+      "A": "Many methods",
+      "B": "Only one method",
+      "C": "Two methods"
+    },
+    "correctAnswer": "B",
+    "explanation": "Salesforce allows only one invocable method per class."
+  },
+  {
+    "id": 2,
+    "question": "What type of class must contain an invocable method?",
+    "options": {
+      "A": "Inner class",
+      "B": "Outer class",
+      "C": "Interface"
+    },
+    "correctAnswer": "B",
+    "explanation": "Invocable methods must be placed in outer classes."
+  },
+  {
+    "id": 3,
+    "question": "How many input parameters can an invocable method accept?",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Unlimited"
+    },
+    "correctAnswer": "A",
+    "explanation": "Invocable methods accept only one input parameter, which is a List type."
+  },
+  {
+    "id": 4,
+    "question": "Which annotation marks fields for invocable input or output?",
+    "options": {
+      "A": "@InvocableVariable",
+      "B": "@AuraEnabled",
+      "C": "@RestResource"
+    },
+    "correctAnswer": "A",
+    "explanation": "InvocableVariable marks fields that Flows can use as inputs or outputs."
+  },
+  {
+    "id": 5,
+    "question": "When should you use callout=true on an invocable method?",
+    "options": {
+      "A": "When the method writes files",
+      "B": "When a Flow may perform callouts at runtime",
+      "C": "When the class has multiple methods"
+    },
+    "correctAnswer": "B",
+    "explanation": "callout=true allows Flow invocable actions to perform callouts conditionally."
+  },
+  {
+    "id": 6,
+    "question": "Which method starts a Flow from Apex?",
+    "options": {
+      "A": "Flow.run()",
+      "B": "Flow.Interview.start()",
+      "C": "Flow.execute()"
+    },
+    "correctAnswer": "B",
+    "explanation": "start() launches a Flow interview programmatically."
+  },
+  {
+    "id": 7,
+    "question": "How do you get a Flow variable value after running it from Apex?",
+    "options": {
+      "A": "getVariableValue()",
+      "B": "getFlowVar()",
+      "C": "Flow.output()"
+    },
+    "correctAnswer": "A",
+    "explanation": "getVariableValue() returns Flow output variables."
+  },
+  {
+    "id": 8,
+    "question": "What does @api do in LWC?",
+    "options": {
+      "A": "Makes properties and methods public",
+      "B": "Encrypts component data",
+      "C": "Hides variables from parent components"
+    },
+    "correctAnswer": "A",
+    "explanation": "@api makes properties/methods accessible to parent components."
+  },
+  {
+    "id": 9,
+    "question": "Where do you register a custom property editor in LWC?",
+    "options": {
+      "A": "targetConfig using configurationEditor",
+      "B": "In Apex class",
+      "C": "In static resources"
+    },
+    "correctAnswer": "A",
+    "explanation": "configurationEditor inside targetConfig registers UI editors."
+  },
+  {
+    "id": 10,
+    "question": "What does cacheable=true allow for Apex methods used in LWC?",
+    "options": {
+      "A": "Use via wire service or imperatively",
+      "B": "Allows DML operations",
+      "C": "Makes method asynchronous"
+    },
+    "correctAnswer": "A",
+    "explanation": "cacheable=true makes the method reactive and available for wire."
+  },
+  {
+    "id": 11,
+    "question": "How must Apex methods that use DML be called in LWC?",
+    "options": {
+      "A": "Via wire service",
+      "B": "Imperatively",
+      "C": "They cannot be called"
+    },
+    "correctAnswer": "B",
+    "explanation": "DML cannot be called through wire; must use imperative calls."
+  },
+  {
+    "id": 12,
+    "question": "How is Apex data returned to LWC formatted?",
+    "options": {
+      "A": "Raw Apex objects",
+      "B": "JSON",
+      "C": "CSV"
+    },
+    "correctAnswer": "B",
+    "explanation": "LWC receives Apex data as JSON."
+  },
+  {
+    "id": 13,
+    "question": "Which objects require Apex because UI API doesn't support them?",
+    "options": {
+      "A": "Account and Contact",
+      "B": "Task and Event",
+      "C": "User and Profile"
+    },
+    "correctAnswer": "B",
+    "explanation": "Task and Event aren’t supported by UI API."
+  },
+  {
+    "id": 14,
+    "question": "Which tool is best for simple HTTP integrations in Flow?",
+    "options": {
+      "A": "Flow HTTP callouts",
+      "B": "Continuation class",
+      "C": "Platform Events"
+    },
+    "correctAnswer": "A",
+    "explanation": "Flow HTTP callouts are simple and built-in."
+  },
+  {
+    "id": 15,
+    "question": "What annotation is required to expose a REST web service?",
+    "options": {
+      "A": "@RestResource",
+      "B": "@AuraEnabled",
+      "C": "@HttpExpose"
+    },
+    "correctAnswer": "A",
+    "explanation": "@RestResource exposes the class as a REST endpoint."
+  },
+  {
+    "id": 16,
+    "question": "Which keywords expose SOAP methods in Apex?",
+    "options": {
+      "A": "public static",
+      "B": "global webservice static",
+      "C": "@SoapCallout"
+    },
+    "correctAnswer": "B",
+    "explanation": "SOAP requires global + webservice + static methods."
+  },
+  {
+    "id": 17,
+    "question": "What must exist before making Apex HTTP callouts?",
+    "options": {
+      "A": "Static resource",
+      "B": "Remote Site Setting or Named Credential",
+      "C": "Custom metadata"
+    },
+    "correctAnswer": "B",
+    "explanation": "A callout requires remote-site trust or Named Credential."
+  },
+  {
+    "id": 18,
+    "question": "Which HTTP method is used to upsert by External ID?",
+    "options": {
+      "A": "GET",
+      "B": "PATCH",
+      "C": "DELETE"
+    },
+    "correctAnswer": "B",
+    "explanation": "PATCH allows upsert using External ID."
+  },
+  {
+    "id": 19,
+    "question": "What does WITH SECURITY_ENFORCED do in SOQL?",
+    "options": {
+      "A": "Enforces field- and object-level security",
+      "B": "Speeds up query execution",
+      "C": "Adds sharing rules automatically"
+    },
+    "correctAnswer": "A",
+    "explanation": "It ensures FLS and CRUD are applied."
+  },
+  {
+    "id": 20,
+    "question": "Which SOQL clause groups rows for aggregate queries?",
+    "options": {
+      "A": "ORDER BY",
+      "B": "GROUP BY",
+      "C": "LIMIT"
+    },
+    "correctAnswer": "B",
+    "explanation": "GROUP BY groups rows for rollups."
+  },
+  {
+    "id": 21,
+    "question": "What does SOSL return?",
+    "options": {
+      "A": "One list of sObjects",
+      "B": "List<List<sObject>>",
+      "C": "A map by field name"
+    },
+    "correctAnswer": "B",
+    "explanation": "Each list in SOSL results represents one object type searched."
+  },
+  {
+    "id": 22,
+    "question": "Are bind variables allowed in dynamic SOQL?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "Yes, but only in WHERE LIMIT"
+    },
+    "correctAnswer": "A",
+    "explanation": "Bind variables work, but bind-field syntax does not."
+  },
+  {
+    "id": 23,
+    "question": "What is TYPEOF used for in SOQL?",
+    "options": {
+      "A": "Changing variable types",
+      "B": "Querying fields based on polymorphic type",
+      "C": "Making aggregate fields dynamic"
+    },
+    "correctAnswer": "B",
+    "explanation": "TYPEOF works with fields like WhatId."
+  },
+  {
+    "id": 24,
+    "question": "Which async tool is good for callouts?",
+    "options": {
+      "A": "Future methods",
+      "B": "Scheduled Apex",
+      "C": "Triggers only"
+    },
+    "correctAnswer": "A",
+    "explanation": "Future methods allow callouts asynchronously."
+  },
+  {
+    "id": 25,
+    "question": "Which async type supports chaining?",
+    "options": {
+      "A": "Batch Apex",
+      "B": "Queueable Apex",
+      "C": "Future methods"
+    },
+    "correctAnswer": "B",
+    "explanation": "Queueable supports job chaining."
+  },
+  {
+    "id": 26,
+    "question": "Which async feature processes large volumes of data?",
+    "options": {
+      "A": "Queueable",
+      "B": "Batch Apex",
+      "C": "Continuation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Batch Apex is designed for massive datasets."
+  },
+  {
+    "id": 27,
+    "question": "How is scheduled Apex triggered?",
+    "options": {
+      "A": "System.runNow()",
+      "B": "System.schedule()",
+      "C": "Flow start"
+    },
+    "correctAnswer": "B",
+    "explanation": "System.schedule() registers a scheduled job."
+  },
+  {
+    "id": 28,
+    "question": "What does the Continuation class support?",
+    "options": {
+      "A": "Short SOQL queries",
+      "B": "Long-running async callouts",
+      "C": "Synchronous Apex only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Continuation avoids long-running synchronous callout limits."
+  },
+  {
+    "id": 29,
+    "question": "Which Batch Apex method collects the records?",
+    "options": {
+      "A": "execute()",
+      "B": "start()",
+      "C": "finish()"
+    },
+    "correctAnswer": "B",
+    "explanation": "start() returns a QueryLocator or Iterable."
+  },
+  {
+    "id": 30,
+    "question": "Which Batch method processes each chunk of records?",
+    "options": {
+      "A": "start()",
+      "B": "execute()",
+      "C": "finish()"
+    },
+    "correctAnswer": "B",
+    "explanation": "execute() handles the logic for each batch group."
+  },
+  {
+    "id": 31,
+    "question": "How do you run a Batch Apex job?",
+    "options": {
+      "A": "Database.executeBatch()",
+      "B": "System.runBatch()",
+      "C": "Batch.run()"
+    },
+    "correctAnswer": "A",
+    "explanation": "executeBatch() starts batch processing."
+  },
+  {
+    "id": 32,
+    "question": "Where do you monitor batch status?",
+    "options": {
+      "A": "AsyncApexJob or Apex Jobs page",
+      "B": "BatchStatus table",
+      "C": "Flow History"
+    },
+    "correctAnswer": "A",
+    "explanation": "Batch jobs appear in AsyncApexJob and Setup → Apex Jobs."
+  },
+  {
+    "id": 33,
+    "question": "What prevents duplicate Queueable jobs?",
+    "options": {
+      "A": "QueueableDuplicateSignature",
+      "B": "QueueableLimiter",
+      "C": "UniqueQueueGuard"
+    },
+    "correctAnswer": "A",
+    "explanation": "QueueableDuplicateSignature defines unique job identity."
+  },
+  {
+    "id": 34,
+    "question": "Can Queueable Apex accept sObjects?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "Only in batch jobs"
+    },
+    "correctAnswer": "A",
+    "explanation": "Queueable supports sObject parameters."
+  },
+  {
+    "id": 35,
+    "question": "What record type is created when scheduling Apex?",
+    "options": {
+      "A": "CronTrigger",
+      "B": "AsyncApexJob",
+      "C": "EventBusTrigger"
+    },
+    "correctAnswer": "A",
+    "explanation": "Scheduled jobs generate a CronTrigger record."
+  },
+  {
+    "id": 36,
+    "question": "Which interface must scheduled Apex implement?",
+    "options": {
+      "A": "Batchable",
+      "B": "Schedulable",
+      "C": "Queueable"
+    },
+    "correctAnswer": "B",
+    "explanation": "Schedulable has the required execute() method."
+  },
+  {
+    "id": 37,
+    "question": "Where does a Continuation return its response?",
+    "options": {
+      "A": "Browser console",
+      "B": "Callback method",
+      "C": "Static resource"
+    },
+    "correctAnswer": "B",
+    "explanation": "Continuation returns data through a callback."
+  },
+  {
+    "id": 38,
+    "question": "Why use Continuation?",
+    "options": {
+      "A": "Avoids synchronous callout time limits",
+      "B": "Makes Apex faster",
+      "C": "To debug flows"
+    },
+    "correctAnswer": "A",
+    "explanation": "Continuation handles long-running requests safely."
+  },
+  {
+    "id": 39,
+    "question": "Which method gives all sObject names?",
+    "options": {
+      "A": "Schema.getGlobalDescribe()",
+      "B": "Schema.describeTabs()",
+      "C": "DescribeSObjectResult.getFields()"
+    },
+    "correctAnswer": "A",
+    "explanation": "getGlobalDescribe() returns all objects."
+  },
+  {
+    "id": 40,
+    "question": "Which object holds metadata for an sObject?",
+    "options": {
+      "A": "DescribeSObjectResult",
+      "B": "SchemaToken",
+      "C": "SObjectInfo"
+    },
+    "correctAnswer": "A",
+    "explanation": "DescribeSObjectResult exposes metadata like fields and labels."
+  },
+  {
+    "id": 41,
+    "question": "Which method returns field metadata as a map?",
+    "options": {
+      "A": "getFieldsList()",
+      "B": "getMap()",
+      "C": "getDescribeFields()"
+    },
+    "correctAnswer": "B",
+    "explanation": "getMap() returns fields by API name."
+  },
+  {
+    "id": 42,
+    "question": "What does dynamic DML allow?",
+    "options": {
+      "A": "Skipping validation rules",
+      "B": "DML built at runtime",
+      "C": "Only query operations"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dynamic DML runs CRUD operations dynamically."
+  },
+  {
+    "id": 43,
+    "question": "What suffix do platform events use?",
+    "options": {
+      "A": "__c",
+      "B": "__e",
+      "C": "_evt"
+    },
+    "correctAnswer": "B",
+    "explanation": "Custom Platform Events end in __e."
+  },
+  {
+    "id": 44,
+    "question": "Can you query platform events in SOQL?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "Only in tooling API"
+    },
+    "correctAnswer": "B",
+    "explanation": "Platform events cannot be queried using SOQL."
+  },
+  {
+    "id": 45,
+    "question": "When do platform events expire?",
+    "options": {
+      "A": "24 hours",
+      "B": "72 hours",
+      "C": "7 days"
+    },
+    "correctAnswer": "B",
+    "explanation": "Events stay in the event bus for up to 72 hours."
+  },
+  {
+    "id": 46,
+    "question": "Which trigger type do platform events support?",
+    "options": {
+      "A": "Before insert",
+      "B": "After insert",
+      "C": "After update"
+    },
+    "correctAnswer": "B",
+    "explanation": "Platform event triggers fire only after insert."
+  },
+  {
+    "id": 47,
+    "question": "Which interface processes inbound emails?",
+    "options": {
+      "A": "Messaging.InboundEmailHandler",
+      "B": "EmailProcessor",
+      "C": "ApexInboundEmail"
+    },
+    "correctAnswer": "A",
+    "explanation": "Inbound emails use the InboundEmailHandler interface."
+  },
+  {
+    "id": 48,
+    "question": "Which is an outbound integration feature?",
+    "options": {
+      "A": "Platform Events",
+      "B": "Flow Screens",
+      "C": "Validation Rules"
+    },
+    "correctAnswer": "A",
+    "explanation": "Platform Events can push data out of Salesforce."
+  },
+  {
+    "id": 49,
+    "question": "What is required for an External Service?",
+    "options": {
+      "A": "Only a Named Credential",
+      "B": "Named Credential, Schema, and Flow",
+      "C": "Only a Flow"
+    },
+    "correctAnswer": "B",
+    "explanation": "External Services require all three pieces."
+  },
+  {
+    "id": 50,
+    "question": "What does Salesforce Connect do?",
+    "options": {
+      "A": "Copies data permanently into Salesforce",
+      "B": "Shows external data virtually inside Salesforce",
+      "C": "Deletes old records"
+    },
+    "correctAnswer": "B",
+    "explanation": "External objects allow viewing external data in real time."
+  },
+  {
+    "id": 51,
+    "question": "What does an Indirect Lookup relationship do?",
+    "options": {
+      "A": "Links external child to standard/custom parent",
+      "B": "Links two external parents",
+      "C": "Syncs permissions between objects"
+    },
+    "correctAnswer": "A",
+    "explanation": "Indirect lookup uses external IDs to link to standard/custom parents."
+  },
+  {
+    "id": 52,
+    "question": "What does an External Lookup relationship do?",
+    "options": {
+      "A": "Links child to external parent via external ID",
+      "B": "Creates external objects automatically",
+      "C": "Converts lookups into master-detail"
+    },
+    "correctAnswer": "A",
+    "explanation": "External lookup links to external object using its external ID."
+  },
+  {
+    "id": 53,
+    "question": "What does apex:actionPoller do?",
+    "options": {
+      "A": "Submits forms",
+      "B": "Refreshes part of a page automatically",
+      "C": "Locks page buttons"
+    },
+    "correctAnswer": "B",
+    "explanation": "actionPoller rerenders sections at intervals."
+  },
+  {
+    "id": 54,
+    "question": "Which VF tag shows all messages?",
+    "options": {
+      "A": "apex:pageMessage",
+      "B": "apex:pageMessages",
+      "C": "apex:messagesAll"
+    },
+    "correctAnswer": "B",
+    "explanation": "pageMessages displays all controller messages."
+  },
+  {
+    "id": 55,
+    "question": "How does JavaScript remoting invoke Apex?",
+    "options": {
+      "A": "Visualforce.remoting.Manager.invokeAction()",
+      "B": "Apex.runRemote()",
+      "C": "Sforce.Invoke()"
+    },
+    "correctAnswer": "A",
+    "explanation": "JS remoting uses invokeAction to call Apex."
+  },
+  {
+    "id": 56,
+    "question": "How do LWCs show toast messages?",
+    "options": {
+      "A": "ShowToastEvent",
+      "B": "window.alert",
+      "C": "apex:toast"
+    },
+    "correctAnswer": "A",
+    "explanation": "LWC uses lightning/platformShowToastEvent."
+  },
+  {
+    "id": 57,
+    "question": "What do Remote Objects allow?",
+    "options": {
+      "A": "CRUD in JavaScript with no Apex",
+      "B": "Only read data",
+      "C": "Only create records"
+    },
+    "correctAnswer": "A",
+    "explanation": "Remote Objects offer JS-driven CRUD without Apex."
+  },
+  {
+    "id": 58,
+    "question": "Are JavaScript remoting calls asynchronous?",
+    "options": {
+      "A": "No, always synchronous",
+      "B": "Yes, stateless and async",
+      "C": "Only when testing"
+    },
+    "correctAnswer": "B",
+    "explanation": "JS Remoting is stateless and async."
+  },
+  {
+    "id": 59,
+    "question": "When do before-save flows run?",
+    "options": {
+      "A": "After triggers",
+      "B": "Before triggers",
+      "C": "Only in scheduled flows"
+    },
+    "correctAnswer": "B",
+    "explanation": "Before-save flows execute earlier than Apex triggers."
+  },
+  {
+    "id": 60,
+    "question": "Which Flow element waits for Platform Events?",
+    "options": {
+      "A": "Decision",
+      "B": "Wait for Conditions",
+      "C": "Pause Only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Wait for Conditions lets Flow subscribe to events."
+  },
+  {
+    "id": 61,
+    "question": "Outbound Messages in Flow work only in:",
+    "options": {
+      "A": "Screen flows",
+      "B": "Record-triggered flows",
+      "C": "Schedule-triggered flows"
+    },
+    "correctAnswer": "B",
+    "explanation": "Outbound Messages require record-triggered flows."
+  },
+  {
+    "id": 62,
+    "question": "What happens to share records when OWD is Public Read/Write?",
+    "options": {
+      "A": "Share records are created",
+      "B": "No share records needed",
+      "C": "All access is removed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Public RW objects don't create share row records."
+  },
+  {
+    "id": 63,
+    "question": "What do Hierarchy Custom Settings allow?",
+    "options": {
+      "A": "No overrides allowed",
+      "B": "Org default + profile/user overrides",
+      "C": "Only user-level settings"
+    },
+    "correctAnswer": "B",
+    "explanation": "Hierarchy settings allow per profile/user override behavior."
+  },
+  {
+    "id": 64,
+    "question": "Why mark a field as External ID?",
+    "options": {
+      "A": "Encrypt data",
+      "B": "Match and avoid duplicates in import",
+      "C": "Make the field read-only"
+    },
+    "correctAnswer": "B",
+    "explanation": "External IDs help match records during data loads."
+  },
+  {
+    "id": 65,
+    "question": "Can SOAP create parent + child in one call using External ID?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "Only with REST"
+    },
+    "correctAnswer": "A",
+    "explanation": "SOAP create() supports parent references with External ID."
+  },
+  {
+    "id": 66,
+    "question": "Can you mix setup objects and normal objects in the same DML?",
+    "options": {
+      "A": "Yes always",
+      "B": "No, not allowed",
+      "C": "Only in test classes"
+    },
+    "correctAnswer": "B",
+    "explanation": "Salesforce blocks mixed DML between setup and non-setup objects."
+  },
+  {
+    "id": 67,
+    "question": "How do you check how many SOQL rows were returned?",
+    "options": {
+      "A": "Limits.getRows()",
+      "B": "Query.countRows()",
+      "C": "Database.getRowCount()"
+    },
+    "correctAnswer": "A",
+    "explanation": "Limits.getRows() shows how many rows were returned."
+  },
+  {
+    "id": 68,
+    "question": "What happens when a debug log gets too large?",
+    "options": {
+      "A": "It is archived",
+      "B": "It is truncated",
+      "C": "It is emailed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Large logs are cut off when exceeding limits."
+  },
+  {
+    "id": 69,
+    "question": "What improves LWC performance for tables with lots of data?",
+    "options": {
+      "A": "Eager loading",
+      "B": "Lazy loading",
+      "C": "Rendering twice"
+    },
+    "correctAnswer": "B",
+    "explanation": "Lazy loading loads rows only when needed."
+  },
+  {
+    "id": 70,
+    "question": "What does Local Dev Server allow?",
+    "options": {
+      "A": "Preview LWC without deploying",
+      "B": "Replace Salesforce org",
+      "C": "Run Apex locally"
+    },
+    "correctAnswer": "A",
+    "explanation": "Local Dev Server previews LWCs instantly."
+  }
+]
